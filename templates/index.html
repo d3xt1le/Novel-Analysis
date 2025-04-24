@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Novel Word Analysis</title>
+</head>
+
+<body>
+    <h1>Novel Word Analysis</h1>
+    <p>Paste a URL from Project Gutenberg to analyze the most common words.</p>
+    <form id="analyze-form">
+        <label for="url">Gutenberg URL:</label><br>
+        <input type="text" id="url" name="url" required><br><br>
+
+        <label for="num_words">Number of words</label><br>
+        <input type="number" id="num_words" name="num_words" value="10"><br><br>
+
+        <input type="submit" value="Analyze">
+    </form>
+
+    <br>
+    <h2>Metadata</h2>
+    <div id="metadata"></div>
+
+    <div id="results-section">
+        <br>
+        <h2>Top Words</h2>
+        <ol id="results-list"></ol>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
